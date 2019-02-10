@@ -25,7 +25,7 @@ class reactionrnn:
             vocab_path = resource_filename(__name__,
                                            'reactionrnn_vocab.json')
 
-        with open(vocab_path, 'r') as json_file:
+        with open(vocab_path, 'r', encoding="utf8") as json_file:
             self.vocab = json.load(json_file)
 
         self.tokenizer = Tokenizer(filters='', char_level=True)
